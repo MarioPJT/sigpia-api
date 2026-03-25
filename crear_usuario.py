@@ -1,8 +1,5 @@
-from app.core.security import hash_password
+from passlib.context import CryptContext
 
-password = "123456"
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
-hash_generado = hash_password(password)
-
-print("Hash generado:")
-print(hash_generado)
+print(pwd_context.hash("123456"))

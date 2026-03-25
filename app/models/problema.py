@@ -19,6 +19,7 @@ class Problema(Base):
 
     proyecto_id = Column(Integer, ForeignKey("proyectos.id", ondelete="CASCADE"), nullable=False, unique=True)
     arbol_nodos = relationship("ArbolProblema", back_populates="problema")
+    arbol_objetivos = relationship("ArbolObjetivo", back_populates="problema")
 
     proyecto = relationship( "Proyecto", back_populates="problema", uselist=False)
 
