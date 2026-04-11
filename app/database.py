@@ -1,6 +1,6 @@
 """
 database.py - Configuración de base de datos para SIGPIA
-Conexión a MySQL usando SQLAlchemy + PyMySQL
+Conexión a PostgreSQL
 """
 
 from sqlalchemy import create_engine
